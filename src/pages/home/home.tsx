@@ -1,19 +1,15 @@
-import billed1 from '../../assets/images/billed1.png';
-import { Title } from '../../components/Title/Title';
-import { About } from '../../components/About/ABOUT';
-import style from './home.module.scss';
-import { Grid } from '../../components/Title/Grid/Grid';
+import billed1 from "../../assets/images/billed1.avif";
+import { Title } from "../../components/Title/Title";
+import style from "./home.module.scss";
 
 export function Home() {
+  return (
     <>
-    <img className={style.image} src={billed1} alt="Billed1" />
-    <Title text={"ON THIS DAY"}/>
-    <Grid gtc= "1fr 1fr" gap={32}>
-        {data && data.map((item) => {
-            return <About key={item.id} id={item.id} imageUrl={item.image} title={item.name} description={item.description} eventes={item.eventes} slug={item.slug}/>
-        })}
-
-    </Grid>
+      <div>
+        <img className={style.image1} src={billed1} alt="Billed1" />
+        <Title text={"ON THIS DAY"} />
+        <p>What happend on this day - historical events, deaths and births thoughout time</p>
+      </div>
     </>
-    )
+  );
 }

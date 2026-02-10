@@ -1,0 +1,13 @@
+@use "../../styles/globals" as globals;
+
+.navbarStyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 82px;
+  align-items: end;
+  justify-items: start;
+  border-bottom: solid;
+}
+
+h3 {
+}

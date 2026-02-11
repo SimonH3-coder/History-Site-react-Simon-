@@ -6,9 +6,21 @@ import { Navbar } from "./components/Navbar/Navbar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { useState } from "react";
 import "./App.css";
+import { MainPage } from "./layouts/Mainpage";
 
-function App() {
+export function App() {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  // funktion til at skifte staten
+  const changeTheme = () => {
+    if (isDarkMode) {
+      setIsDarkMode(false);
+    } else {
+      setIsDarkMode(true);
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -19,6 +31,7 @@ function App() {
           <Route path="/ToDay" element={<ToDay />} />
         </Routes>
       </BrowserRouter>
+      <MainPage isDarkMode={isDarkMode} changeTheme={changeTheme} />;
     </>
   );
 }

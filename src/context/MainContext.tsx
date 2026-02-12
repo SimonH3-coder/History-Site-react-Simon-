@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../context/themecontext";
+import { ThemeContext } from "../context/themeContext";
 import style from "./MainContect.module.scss";
 
 export const MainPage: React.FC () => {

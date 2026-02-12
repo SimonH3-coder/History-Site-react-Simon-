@@ -1,4 +1,4 @@
-import { Home } from "./pages/home/home";
+import { Header } from "./components/header/header";
 import { ByDate } from "./pages/Date/date";
 import { Since } from "./pages/since/since";
 import { ToDay } from "./pages/toDay/today";
@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { useState } from "react";
 import "./App.css";
-import { MainPage } from "./layouts/Mainpage";
+// import { MainPage } from "./layouts/Mainpage";
 
 export function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -20,18 +20,17 @@ export function App() {
       setIsDarkMode(true);
     }
   };
-
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<ByDate />} />
+
           <Route path="/byDate" element={<ByDate />} />
           <Route path="/Since" element={<Since />} />
           <Route path="/ToDay" element={<ToDay />} />
         </Routes>
       </BrowserRouter>
-      <MainPage isDarkMode={isDarkMode} changeTheme={changeTheme} />;
     </>
   );
 }

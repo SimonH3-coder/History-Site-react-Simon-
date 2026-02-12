@@ -1,4 +1,4 @@
-import { themeContext } from "./context/themecontext";
+import { ThemeContext } from "../context/themeContext";
 import { createContext, useState, ReactNode } from "react";
 
 // Her laves vores context

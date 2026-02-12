@@ -1,0 +1,31 @@
+@use "../../styles/globals" as globals;
+
+.dateContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Limelight, cursive;
+  color: $color_dark;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color_gray;
+}
+
+.dateIcon {
+  width: 16px;
+  height: 16px;
+  color: $color_gray;
+}
+
+// Alternativt styling til date
+
+.dateBadge {
+  background-color: $color_primary_white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: $color_gray;
+}

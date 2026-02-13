@@ -1,5 +1,5 @@
 import billed1 from "../../assets/images/billed1.avif";
-import { Title } from "../Title/Title";
+
 import style from "./header.module.scss";
 
 export function Header() {

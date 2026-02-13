@@ -1,0 +1,39 @@
+@use "../../styles/globals" as color;
+
+.boxSign {
+  background-color: color.$color_dark;
+  height: 30vh;
+  width: 50vh;
+  border: 24px solid color.$color_gray;
+  position: absolute;
+  z-index: 10;
+  top: 80vh;
+  left: 25vw;
+  background:
+    radial-gradient(circle, color.$color_primary_white 50%, transparent 51%) top left,
+    radial-gradient(circle, color.$color_primary_white 50%, transparent 51%) top right,
+    radial-gradient(circle, color.$color_primary_white 50%, transparent 51%) bottom left,
+    radial-gradient(circle, color.$color_primary_white 50%, transparent 51%) bottom right,
+    black;
+
+  background-size: 16px 16px; // altid ensformlig, så bliver den oval
+  background-repeat: no-repeat;
+  .overSkrift {
+    color: color.$color_primary_white;
+    font-family: "Limelight", sans-serif;
+    font-size: 50px;
+  }
+  .broedTekst {
+    color: color.$color_primary_white;
+    font-family: "Linelight", sans-serif;
+    font-size: 20px;
+  }
+
+  .searchInput {
+    background-color: color.$color_dark;
+    border: none;
+    font-size: 40px;
+    margin-left: 30px;
+    color: color.$color_primary_white;
+  }
+}

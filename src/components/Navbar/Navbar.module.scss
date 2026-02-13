@@ -1,13 +1,38 @@
-@use "../../styles/globals" as globals;
+@use "../../styles/globals" as color;
 
 .navbarStyle {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 82px;
-  align-items: end;
-  justify-items: start;
-  border-bottom: solid;
-}
+  width: 100%;
 
-h3 {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: color.$color_dark;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        font-family: "Limelight", sans-serif;
+        display: block;
+        text-align: center;
+        padding: 14px 150px;
+        text-decoration: none;
+        color: color.$color_primary_white;
+        font-size: 36px;
+      }
+      a:hover {
+        background-color: color.$color_light_brown;
+      }
+      a.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
 }

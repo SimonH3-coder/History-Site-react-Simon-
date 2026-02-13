@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from "./Mainpage.module.scss";
 
 export const MainPage = () => {
   // Her indsættes vore state til at undersøge om isDarkMode er true eller false

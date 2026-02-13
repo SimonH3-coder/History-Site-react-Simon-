@@ -1,8 +1,6 @@
-import { Header } from "./components/header/header";
 import { ByDate } from "./pages/Date/date";
 import { Since } from "./pages/since/since";
 import { ToDay } from "./pages/toDay/today";
-import { Navbar } from "./components/Navbar/Navbar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -24,11 +22,9 @@ export function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<ByDate />} />
-
           <Route path="/byDate" element={<ByDate />} />
+          <Route index element={<ToDay />} />
           <Route path="/Since" element={<Since />} />
-          <Route path="/ToDay" element={<ToDay />} />
         </Routes>
       </BrowserRouter>
     </>

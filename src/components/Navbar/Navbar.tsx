@@ -4,12 +4,25 @@ import style from "./Navbar.module.scss";
 export function Navbar() {
   return (
     <>
-      <nav>
-        <ul className={style.navbarStyle}>
+      <nav className={style.navbarStyle}>
+        <ul>
           <li>
-            <NavLink to="/ByDate"> By Date</NavLink>
-            <NavLink to="/Since"> Since </NavLink>
-            <NavLink to="/ToDay"> To Day </NavLink>
+            <NavLink to="/ByDate" className={({ isActive }) => (isActive ? style.active : "")}>
+              {" "}
+              By Date
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/" className={({ isActive }) => (isActive ? style.active : "")}>
+              {" "}
+              Today{" "}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Since" className={({ isActive }) => (isActive ? style.active : "")}>
+              {" "}
+              Since{" "}
+            </NavLink>
           </li>
         </ul>
       </nav>
